@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Guia do hóspede Mýra Villas: mercados, atacado, padaria, saúde, bancos, restaurantes e natureza em Embu-Guaçu, com rotas a partir da casa.">
+<meta property="og:title" content="Guia da Região · Mýra Villas">
+<meta property="og:description" content="Tudo o que você precisa em Embu-Guaçu, a cerca de 5 km da casa.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1b3768">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Guia da Região · Mýra Villas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: Mýra Villas guest guide — navy brand band, illustrated (not-to-scale) map with numbered pins + detail panel, amenity checklist, numbered list */
+:root{
+  --navy:#1b3768; --navy-deep:#122849; --aegean:#2f6fb5; --white:#ffffff; --stone:#eef1f5; --bougain:#d23a73;
+  --bg:#f6f8fb; --surface:#ffffff; --fg:#14233f; --muted:#5d6b82; --line:#dbe2ec; --soft:#e7eef8;
+  --c-mercado:#2f6fb5; --c-atacado:#1b3768; --c-padaria:#b9832f; --c-restaurante:#d23a73; --c-fastfood:#e07b26; --c-saude:#16958c; --c-banco:#6a7891; --c-natureza:#5b8a47;
+  --font-display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --font-body:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1a30; --surface:#142442; --fg:#e8eef8; --muted:#a3b2c9; --line:#25385c; --soft:#1b2f54;
+  --aegean:#6aa5e8; --bougain:#ef6c9c;
+  --c-mercado:#6aa5e8; --c-atacado:#9db5e3; --c-padaria:#e0b066; --c-restaurante:#ef6c9c; --c-fastfood:#f29a52; --c-saude:#4cc7bd; --c-banco:#a8b5ca; --c-natureza:#8fbf78;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0d1a30; --surface:#142442; --fg:#e8eef8; --muted:#a3b2c9; --line:#25385c; --soft:#1b2f54;
+  --aegean:#6aa5e8; --bougain:#ef6c9c;
+  --c-mercado:#6aa5e8; --c-atacado:#9db5e3; --c-padaria:#e0b066; --c-restaurante:#ef6c9c; --c-fastfood:#f29a52; --c-saude:#4cc7bd; --c-banco:#a8b5ca; --c-natureza:#8fbf78;
+  color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.55}
+.inner{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* brand band */
+.hero{background:var(--navy);color:#fff;margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 34px);padding-bottom:0}
+.hero .inner{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;padding-block:0 30px}
+@media (max-width:640px){.hero .inner{grid-template-columns:1fr;gap:14px}}
+.seal{width:104px;height:104px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 5px var(--navy),0 0 0 6px rgba(255,255,255,.35)}
+.seal b{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:.06em;line-height:1;display:block}
+.seal small{font-family:var(--font-display);font-size:9.5px;letter-spacing:.32em;display:block;margin-top:5px}
+.seal svg{width:22px;height:22px;display:block;margin:0 auto 6px}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.8;font-weight:600}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(28px,5vw,44px);line-height:1.1;margin:6px 0 8px;text-wrap:balance;letter-spacing:.01em}
+.hero p{margin:0;max-width:60ch;opacity:.9}
+.homebar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:14px;font-size:13.5px}
+.homebar .addr{opacity:.85}
+.meander{height:14px;background-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 13H6V3H18V9H11V6' fill='none' stroke='%23ffffff' stroke-opacity='.55' stroke-width='1.6'/%3E%3Cpath d='M14 13H28' fill='none' stroke='%23ffffff' stroke-opacity='.55' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:repeat-x;background-position:0 0}
+.bwhite{font:600 13px var(--font-body);text-decoration:none;color:var(--navy);background:#fff;padding:7px 13px;border-radius:999px;border:0;cursor:pointer}
+.bline{font:600 13px var(--font-body);color:#fff;background:transparent;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.6);cursor:pointer}
+
+main{padding-block:30px 50px}
+h2{font-family:var(--font-display);font-weight:600;font-size:24px;margin:0;letter-spacing:.02em;color:var(--fg)}
+.sechead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;margin-bottom:12px}
+.sechead p{margin:0;color:var(--muted);font-size:13.5px}
+section+section{margin-top:40px}
+
+/* map */
+.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.mapscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapscroll svg{display:block;width:100%;min-width:700px;height:auto}
+.pin{cursor:pointer}
+.pin:focus-visible{outline:none}
+.pin:focus-visible circle.body{stroke:#ffd34d;stroke-width:3.5}
+.pin.dim{opacity:.22}
+.detail{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;border-top:1px solid var(--line)}
+.num{width:34px;height:34px;border-radius:50%;background:var(--cc);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px;flex:none}
+.dname{font-weight:700;font-size:16.5px}
+.dmeta{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cc);font-weight:700}
+.daddr{color:var(--muted);font-size:13.5px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
+.chip{font:600 12.5px var(--font-body);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:6px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.chip .dot{width:10px;height:10px;border-radius:50%;background:var(--cc,var(--fg))}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip:focus-visible,.btn:focus-visible,.am:focus-visible,.place:focus-visible{outline:2px solid var(--bougain);outline-offset:2px}
+.maphint{font-size:12px;color:var(--muted);padding:0 18px 14px;margin:0}
+
+/* amenities */
+.amen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:760px){.amen{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.am{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px 14px;display:grid;gap:2px;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.am:hover{border-color:var(--cc)}
+.am .row{display:flex;align-items:center;gap:9px}
+.am .ok{width:22px;height:22px;border-radius:50%;background:var(--cc);display:grid;place-items:center;flex:none}
+.am .ok svg{width:12px;height:12px}
+.am .lbl{font-weight:700;font-size:14.5px}
+.am .sub{font-size:12px;color:var(--muted);padding-left:31px}
+
+/* list */
+.cathead{display:flex;align-items:center;gap:10px;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.cathead h3{font-family:var(--font-display);font-weight:600;font-size:18px;margin:0;letter-spacing:.02em}
+.cathead .dot{width:11px;height:11px;border-radius:50%;background:var(--cc)}
+.cathead .n{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:700px){.list{grid-template-columns:1fr}}
+.place{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-content:start;min-width:0}
+.place .num{width:28px;height:28px;font-size:12.5px;grid-row:span 4;cursor:pointer}
+.place.hl{border-color:var(--bougain);box-shadow:0 0 0 3px color-mix(in srgb,var(--bougain) 18%,transparent)}
+.pname{font-weight:700;font-size:15px}
+.note{font-size:13.5px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn{font:600 12.5px var(--font-body);text-decoration:none;color:#fff;background:var(--navy);padding:6px 12px;border-radius:999px;border:0;cursor:pointer}
+:root:not([data-theme="light"]) .btn{}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.btn.soft{background:var(--soft);color:var(--fg)}
+.foot{margin-top:34px;font-size:12.5px;color:var(--muted);max-width:75ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<div class="hero">
+  <div class="inner">
+    <div class="seal" aria-hidden="true"><div>
+      <svg viewBox="0 0 24 24"><path d="M6 21V10a6 6 0 0 1 12 0v11Z" fill="#fff"/><path d="M8 15c1.3 1 2.7 1 4 0s2.7-1 4 0M8 18c1.3 1 2.7 1 4 0s2.7-1 4 0" stroke="#1b3768" stroke-width="1.4" fill="none"/></svg>
+      <b>MÝRA</b><small>VILLAS</small></div></div>
+    <div>
+      <div class="kicker">Guia do hóspede · Embu-Guaçu</div>
+      <h1>Sossego no verde, com tudo a 5 km</h1>
+      <p>Seu refúgio grego pertinho de SP fica na Chácara Rancho Fundo. O centro de Embu-Guaçu, a cerca de 5 km, tem mercado, atacado, padaria, açougue, farmácia, pronto-socorro, bancos e boa comida.</p>
+      <div class="homebar">
+        <span class="addr">Chácara Rancho Fundo · Embu-Guaçu – SP · 06910-770</span>
+        <a class="bwhite" href="https://www.google.com/maps/search/?api=1&query=-23.793139,-46.799183" target="_blank" rel="noopener">Abrir a casa no Google Maps</a>
+        <button class="bline" id="copyHome" type="button">Copiar endereço</button>
+      </div>
+    </div>
+  </div>
+  <div class="meander" aria-hidden="true"></div>
+</div>
+
+<main class="inner">
+  <section aria-labelledby="h-map">
+    <div class="sechead"><h2 id="h-map">Mapa ilustrado</h2><p>Toque num número para ver o lugar e traçar a rota</p></div>
+    <div class="mapbox">
+      <div class="mapscroll" id="mapscroll"><svg id="map" viewBox="0 0 800 620" role="img" aria-label="Mapa ilustrado de Embu-Guaçu com a casa Mýra Villas e os comércios numerados"></svg></div>
+      <div class="detail" id="detail" aria-live="polite"></div>
+      <div class="legend" id="legend" role="group" aria-label="Filtrar o mapa por categoria"></div>
+      <p class="maphint">Mapa ilustrativo, fora de escala: mostra a direção e a vizinhança de cada lugar. Para a rota exata, use os botões do Google Maps ou Waze.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-amen">
+    <div class="sechead"><h2 id="h-amen">Tem em Embu-Guaçu</h2><p>Toque para filtrar</p></div>
+    <div class="amen" id="amen"></div>
+  </section>
+
+  <section aria-labelledby="h-list">
+    <div class="sechead"><h2 id="h-list">Todos os lugares</h2></div>
+    <div id="out"></div>
+  </section>
+
+  <p class="foot">Informações reunidas de guias e diretórios públicos (Tripadvisor, Tiendeo, Restaurant Guru, páginas dos estabelecimentos, AllTrails). Horários mudam: confira no Google Maps antes de sair. Emergência: 192 (SAMU) · 193 (Bombeiros) · 190 (Polícia).</p>
+</main>
+
+<script>
+const HOME = "-23.793139,-46.799183";
+const CATS = {
+  mercado:{label:"Mercados", short:"Mercados", sub:"Extra, Dia e mais", color:"--c-mercado"},
+  atacado:{label:"Atacado & bebidas", short:"Atacado", sub:"compras grandes", color:"--c-atacado"},
+  padaria:{label:"Padaria, açougue & hortifrúti", short:"Padaria & açougue", sub:"pão, carne, frutas", color:"--c-padaria"},
+  restaurante:{label:"Restaurantes & pizzarias", short:"Restaurantes", sub:"italiano, japonês, pizza", color:"--c-restaurante"},
+  fastfood:{label:"Lanches & delivery", short:"Lanches", sub:"esfiha, hambúrguer", color:"--c-fastfood"},
+  saude:{label:"Saúde", short:"Saúde", sub:"pronto-socorro, farmácias", color:"--c-saude"},
+  banco:{label:"Bancos & caixas", short:"Bancos", sub:"Bradesco, Itaú, Caixa, BB", color:"--c-banco"},
+  natureza:{label:"Natureza & lazer", short:"Natureza", sub:"cachoeira, pesqueiros", color:"--c-natureza"}
+};
+// x,y = position on the illustrated map (viewBox 800x620)
+const PLACES = [
+  {id:"extra", n:"Extra Mercado", c:"mercado", w:"Centro", a:"Rua Boa Vista, 625 – Centro, Embu-Guaçu", t:"O maior mercado da cidade. Por volta das 7h às 22h.", x:428,y:342},
+  {id:"dia", n:"Supermercado Dia", c:"mercado", w:"Centro", a:"Rua Coronel Luiz Tenório de Brito, 644 – Embu-Guaçu", t:"Para compras rápidas e preço baixo.", x:420,y:430},
+  {id:"mg", n:"MG Supermercado", c:"mercado", w:"Centro", a:"Rua Emília Pires, 365 – Centro, Embu-Guaçu", t:"Mercado de bairro no centro.", x:478,y:318},
+  {id:"vencedor", n:"Vencedor Atacadista", c:"atacado", w:"Centro", a:"Rua Emília Pires, 295 – Centro, Embu-Guaçu", t:"Atacarejo para abastecer a casa para o fim de semana.", x:478,y:284},
+  {id:"economico", n:"Econômico Atacadão", c:"atacado", w:"Val Flor", a:"Rodovia José Simões Louro Júnior, 43422 – Val Flor, Embu-Guaçu", t:"Supermercado atacadista na rodovia.", x:112,y:566},
+  {id:"dion", n:"Carvalho Dion Distribuidora de Bebidas", c:"atacado", w:"Centro", a:"Rua Coronel Luiz Tenório de Brito, 430 – Centro, Embu-Guaçu", t:"Bebidas e gelo para o churrasco.", x:296,y:430},
+  {id:"provincial", n:"Padaria Provincial", c:"padaria", w:"Centro", a:"Rua Boa Vista, 550 – Centro, Embu-Guaçu", t:"Pão quentinho, café da manhã e frios. Faz entrega.", x:394,y:380},
+  {id:"maxboi", n:"Max Boi", c:"padaria", w:"Centro", a:"Rua Boa Vista, 340 – Centro, Embu-Guaçu", t:"Açougue: carnes para o churrasco.", x:299,y:342},
+  {id:"ebba", n:"Ebba Hortifruti", c:"padaria", w:"Centro", a:"Rua Boa Vista, 320 – Centro, Embu-Guaçu", t:"Frutas e verduras. Seg–sáb 7h–20h, dom 7h–14h.", x:290,y:380},
+  {id:"athina", n:"Athina Bistrô & Restaurante", c:"restaurante", w:"Centro", a:"Athina Bistro, Embu-Guaçu", t:"Italiana e brasileira. Um dos mais bem avaliados.", x:372,y:288},
+  {id:"victoria", n:"Victoria Restaurante", c:"restaurante", w:"Centro", a:"Victoria Restaurante, Embu-Guaçu", t:"Comida brasileira e pizza.", x:422,y:294},
+  {id:"sakura", n:"Restaurante Sakura", c:"restaurante", w:"Centro", a:"Restaurante Sakura, Embu-Guaçu", t:"Japonês e brasileiro.", x:205,y:474},
+  {id:"kazuaki", n:"Kazuaki Sushi", c:"restaurante", w:"Centro", a:"Kazuaki Sushi, Embu-Guaçu", t:"O sushi mais procurado da cidade.", x:252,y:480},
+  {id:"papi", n:"Pizzaria Papi & Adore", c:"restaurante", w:"Centro", a:"Rua Genaro Mentoni – Embu-Guaçu", t:"Pizza com entrega.", x:300,y:474},
+  {id:"mannocci", n:"Rancho Mannocci Pizzaria & Chopperia", c:"restaurante", w:"Centro", a:"Rua Ernesto João Marcelino – Embu-Guaçu", t:"Pizza e chope gelado.", x:348,y:480},
+  {id:"ilha", n:"Ilha Pub", c:"restaurante", w:"Centro", a:"Ilha Pub, Embu-Guaçu", t:"Pizza e bar, muito bem avaliado.", x:396,y:474},
+  {id:"esfiha", n:"Ponto da Esfiha", c:"fastfood", w:"Centro", a:"Rua Boa Vista, 125 – Centro, Embu-Guaçu", t:"Esfihas, pizzas e lanches. Tradicional no centro.", x:201,y:342},
+  {id:"captain", n:"The Captain American Food", c:"fastfood", w:"Centro", a:"The Captain American Food, Embu-Guaçu", t:"Hambúrguer artesanal.", x:444,y:480},
+  {id:"comodonis", n:"Comodonis Hamburgueria", c:"fastfood", w:"Centro", a:"Comodonis Hamburgueria, Embu-Guaçu", t:"Hamburgueria local.", x:490,y:470},
+  {id:"recantos", n:"Recanto's Hamburgueria e Pizzaria", c:"fastfood", w:"Recanto Lagoa Grande", a:"Recanto's Hamburgueria e Pizzaria, Recanto Lagoa Grande, Embu-Guaçu", t:"Hambúrguer e pizza. Tel. (11) 4021-3171.", x:712,y:300},
+  {id:"ps", n:"Pronto Socorro de Embu-Guaçu", c:"saude", w:"Centro", a:"Pronto Socorro Municipal, Centro, Embu-Guaçu", t:"Urgência e emergência 24h.", x:268,y:286},
+  {id:"farm", n:"Farmácias do centro", c:"saude", w:"Centro", a:"farmácia, Centro, Embu-Guaçu", q:"farmácia Embu-Guaçu", t:"Várias opções no centro, como a DrogaDélia.", x:320,y:292},
+  {id:"itau", n:"Itaú", c:"banco", w:"Centro", a:"Rua Boa Vista, 210 – Centro, Embu-Guaçu", t:"Agência e caixas eletrônicos.", x:240,y:380},
+  {id:"bradesco", n:"Bradesco", c:"banco", w:"Centro", a:"Rua Boa Vista, 238 – Centro, Embu-Guaçu", t:"Agência e caixas eletrônicos.", x:252,y:342},
+  {id:"caixa", n:"Caixa Econômica Federal", c:"banco", w:"Centro", a:"Rua Boa Vista, 715 – Embu-Guaçu", t:"Agência e caixas eletrônicos.", x:469,y:380},
+  {id:"bb", n:"Banco do Brasil", c:"banco", w:"Centro", a:"Praça Inácio Pires de Moraes, 5 – Centro, Embu-Guaçu", t:"Agência na praça central.", x:214,y:292},
+  {id:"funil", n:"Cachoeira do Funil", c:"natureza", w:"Zona rural", a:"Cachoeira do Funil, Embu-Guaçu", t:"Trilha de ~9 km ida e volta (3h a 3h30), queda de cerca de 50 m com poço. Nível moderado.", x:724,y:520},
+  {id:"galego", n:"Pesqueiro do Galego", c:"natureza", w:"Zona rural", a:"Pesqueiro do Galego, Embu-Guaçu", t:"Pesca e almoço num sábado de sol.", x:640,y:420},
+  {id:"bonito", n:"Pesqueiro do Bonito", c:"natureza", w:"Zona rural", a:"Pesqueiro do Bonito, Embu-Guaçu", t:"Pesqueiro com restaurante.", x:560,y:548}
+];
+PLACES.forEach((p,i)=>p.no=i+1);
+const POSTOS = "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("posto de combustível perto de -23.793139,-46.799183");
+
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const enc = encodeURIComponent;
+const dest = p => p.q || (p.a.includes(p.n.split(" ")[0]) ? p.a : p.n+", "+p.a);
+const gDir = p => `https://www.google.com/maps/dir/?api=1&origin=${HOME}&destination=${enc(dest(p))}`;
+const gMap = p => `https://www.google.com/maps/search/?api=1&query=${enc(dest(p))}`;
+const waze = p => `https://waze.com/ul?q=${enc(dest(p))}&navigate=yes`;
+const check = `<svg viewBox="0 0 12 12"><path d="M2.5 6.2 5 8.6 9.6 3.6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+let cat = "todos", sel = null;
+
+/* ---------- static illustration (drawn once) ---------- */
+function rng(seed){return()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};}
+function baseMap(){
+  const r = rng(42);
+  const M = {land:"#e4eedb", hill:"#d3e3c6", hill2:"#c2d8b2", tree:"#7fa86a", tree2:"#5f8f4e", road:"#ffffff", roadEdge:"#c9d3df", town:"#f4f6f9", block:"#e3e8ef", water:"#9fcaf0", waterEdge:"#5f9fdc", navy:"#1b3768", ink:"#33415c"};
+  let s = `<defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#b9cfa8"/></pattern>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#0b1a33" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="800" height="620" fill="${M.land}"/><rect width="800" height="620" fill="url(#dots)" opacity=".6"/>`;
+  // hills
+  [[90,120,150,90],[300,90,170,70],[720,160,140,110],[120,330,90,140],[620,600,220,90],[780,420,90,120],[520,170,90,60]].forEach(([cx,cy,rx,ry],i)=>{
+    s+=`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${i%2?M.hill2:M.hill}" opacity=".9"/>`;
+  });
+  // lakes
+  s+=`<path d="M600 395 q30 -22 70 -4 q28 16 8 40 q-30 26 -66 12 q-34 -14 -12 -48z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
+      <path d="M520 530 q26 -20 62 -6 q22 14 2 34 q-28 20 -58 6 q-26 -14 -6 -34z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
+      <path d="M680 270 q34 -16 66 4 q20 18 -4 36 q-34 18 -62 0 q-22 -18 0 -40z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
+      <text x="713" y="248" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-style="italic" fill="${M.ink}">Recanto Lagoa Grande</text>`;
+  // waterfall
+  s+=`<path d="M705 470 l40 0 l10 20 l-60 0z" fill="#9aa7a0"/><path d="M712 490 q4 18 0 36 M724 490 q4 18 0 38 M736 490 q4 18 0 36" stroke="${M.waterEdge}" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse cx="724" cy="540" rx="34" ry="9" fill="${M.water}" stroke="${M.waterEdge}"/>`;
+  // river
+  s+=`<path d="M800 360 C 740 380, 700 350, 670 400 S 600 470, 590 520" stroke="${M.water}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+  // trees (avoid town, house, lakes)
+  const avoid=(x,y)=> (x>135&&x<535&&y>230&&y<520) || (x>560&&x<760&&y>40&&y<190) || (x>590&&x<700&&y>380&&y<450) || (x>505&&x<600&&y>515&&y<575) || (x>650&&x<780&&y>230&&y<320) || (x>690&&x<770&&y>460&&y<560) || (x>70&&x<160&&y>540);
+  for(let i=0;i<190;i++){
+    const x=r()*800, y=r()*620; if(avoid(x,y)) continue;
+    const rr=5+r()*6; s+=`<circle cx="${x.toFixed(1)}" cy="${(y+2).toFixed(1)}" r="${rr.toFixed(1)}" fill="#000" opacity=".07"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rr.toFixed(1)}" fill="${r()>.5?M.tree:M.tree2}"/>`;
+  }
+  // roads: SP-214 from north (Itapecerica) past house into town; south exit to Val Flor
+  const road=(d,w=12)=>`<path d="${d}" stroke="${M.roadEdge}" stroke-width="${w+4}" fill="none" stroke-linecap="round"/><path d="${d}" stroke="${M.road}" stroke-width="${w}" fill="none" stroke-linecap="round"/>`;
+  s+=road("M560 -10 C 590 60, 610 110, 600 160 S 540 230, 505 262");
+  s+=road("M170 490 C 140 525, 120 545, 60 640");
+  s+=road("M495 470 C 560 470, 600 470, 640 440",7);
+  s+=road("M600 160 C 650 180, 690 230, 700 268",7);
+  s+=road("M515 470 C 540 510, 545 520, 552 532",6);
+  s+=`<path d="M560 -10 C 590 60, 610 110, 600 160 S 540 230, 505 262" stroke="#e5b54a" stroke-width="1.6" stroke-dasharray="8 7" fill="none"/>`;
+  // route label
+  s+=`<g transform="translate(470 175) rotate(-38)"><rect x="-4" y="-13" width="150" height="20" rx="10" fill="${M.navy}"/><text x="71" y="1.5" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="10.5" fill="#fff">SP-214 · ~5 km até o centro</text></g>`;
+  s+=`<text x="575" y="22" font-family="Montserrat,sans-serif" font-weight="700" font-size="11" fill="${M.ink}">↑ Itapecerica da Serra</text>`;
+  s+=`<text x="40" y="604" font-family="Montserrat,sans-serif" font-weight="600" font-size="10.5" fill="${M.ink}">Val Flor ↓</text>`;
+  // town
+  s+=`<path d="M160 258 Q150 245 168 240 L500 236 Q522 238 524 258 L526 498 Q524 516 504 516 L170 520 Q148 518 150 498 Z" fill="${M.town}" stroke="${M.roadEdge}" stroke-width="2"/>`;
+  for(let gx=175; gx<505; gx+=46) for(let gy=254; gy<505; gy+=40){
+    if(gy>320&&gy<400) continue; if(gy>410&&gy<450) continue;
+    s+=`<rect x="${gx}" y="${gy}" width="36" height="26" rx="4" fill="${M.block}"/>`;
+  }
+  // praça
+  s+=`<rect x="190" y="268" width="50" height="46" rx="8" fill="#cfe1c0"/><circle cx="215" cy="291" r="10" fill="#a9c894"/>`;
+  // streets in town
+  s+=road("M165 361 L512 361",14);
+  s+=road("M175 430 L505 430",10);
+  s+=road("M462 250 L462 505",9);
+  s+=`<text x="345" y="364.5" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="${M.navy}">RUA BOA VISTA</text>
+      <text x="362" y="433.2" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="600" font-size="8" letter-spacing=".8" fill="${M.ink}">R. CEL. LUIZ TENÓRIO</text>
+      <text transform="translate(465.2 468) rotate(-90)" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="600" font-size="8" letter-spacing=".8" fill="${M.ink}">R. EMÍLIA PIRES</text>
+      <text x="215" y="328" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8.5" font-style="italic" fill="${M.ink}">Praça</text>`;
+  s+=`<g><rect x="156" y="222" width="232" height="26" rx="13" fill="${M.navy}"/><text x="272" y="239.5" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#fff">CENTRO DE EMBU-GUAÇU</text></g>`;
+  // house (Greek white villa with blue dome)
+  s+=`<g transform="translate(655 108)" filter="url(#sh)">
+      <path d="M-55 4 L-30 0" stroke="${M.roadEdge}" stroke-width="7" stroke-linecap="round"/><path d="M-55 4 L-30 0" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <rect x="-30" y="-26" width="58" height="40" rx="2" fill="#fff" stroke="#c7d2e0"/>
+      <rect x="-14" y="-46" width="30" height="22" fill="#fff" stroke="#c7d2e0"/>
+      <path d="M-12 -46 a13 13 0 0 1 26 0z" fill="#2f6fb5"/>
+      <path d="M-20 14 v-14 a5 5 0 0 1 10 0 v14z" fill="#2f6fb5"/>
+      <rect x="6" y="-14" width="9" height="11" fill="#2f6fb5"/><rect x="-4" y="-40" width="8" height="10" rx="4" fill="#2f6fb5"/>
+      <rect x="-36" y="14" width="70" height="7" fill="#7fc1f2" stroke="#5f9fdc"/>
+      <path d="M28 -26 q10 6 4 18" stroke="${css('--bougain')||'#d23a73'}" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/>
+    </g>
+    <g><rect x="604" y="138" width="110" height="38" rx="10" fill="${M.navy}"/>
+      <text x="659" y="155" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="12.5" letter-spacing="1.2" fill="#fff">MÝRA VILLAS</text>
+      <text x="659" y="169" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#cfe0f6">Chácara Rancho Fundo</text></g>`;
+  // compass
+  s+=`<g transform="translate(60 60)"><circle r="26" fill="#fff" opacity=".85" stroke="${M.navy}" stroke-width="1.2"/><path d="M0 -20 L6 0 L0 20 L-6 0Z" fill="${M.navy}"/><path d="M0 -20 L6 0 L-6 0Z" fill="#d23a73"/><text y="-30" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="12" fill="${M.navy}">N</text></g>`;
+  s+=`<text x="785" y="610" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9.5" fill="${M.ink}" opacity=".8">ilustrativo · fora de escala</text>`;
+  return s;
+}
+const BASE = baseMap();
+
+function drawMap(){
+  const svg = document.getElementById("map");
+  let s = BASE + `<g id="pins">`;
+  const order = [...PLACES].sort((a,b)=>(a.id===sel)-(b.id===sel));
+  for(const p of order){
+    const col = css(CATS[p.c].color), on = sel===p.id, dim = cat!=="todos" && p.c!==cat;
+    const r = on?16:12;
+    s += `<g class="pin${dim?" dim":""}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.no}. ${p.n}" filter="url(#sh)">
+      <title>${p.no}. ${p.n}</title>
+      ${on?`<circle cx="${p.x}" cy="${p.y}" r="24" fill="${col}" opacity=".25"/>`:""}
+      <circle class="body" cx="${p.x}" cy="${p.y}" r="${r}" fill="${col}" stroke="#fff" stroke-width="2.5"/>
+      <text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="${on?13:11}" fill="#fff">${p.no}</text></g>`;
+  }
+  s += `</g>`;
+  svg.innerHTML = s;
+  svg.querySelectorAll(".pin").forEach(g=>{
+    const go=()=>{select(g.dataset.id,false);};
+    g.addEventListener("click",go);
+    g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
+  });
+}
+
+function detail(){
+  const el = document.getElementById("detail");
+  const p = PLACES.find(x=>x.id===sel);
+  if(!p){
+    el.style.setProperty("--cc","var(--navy)");
+    el.innerHTML = `<div class="num" style="background:var(--navy)"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 20V10a6 6 0 0 1 12 0v10Z" fill="#fff"/></svg></div>
+      <div><div class="dmeta" style="color:var(--aegean)">Você está aqui</div><div class="dname">Mýra Villas · Chácara Rancho Fundo</div>
+      <div class="daddr">Embu-Guaçu – SP, 06910-770 · cerca de 5 km do centro pela SP-214</div>
+      <div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=-23.793139,-46.799183" target="_blank" rel="noopener">Abrir no Google Maps</a><a class="btn ghost" href="${POSTOS}" target="_blank" rel="noopener">Postos de combustível perto da casa</a></div></div>`;
+    return;
+  }
+  el.style.setProperty("--cc",`var(${CATS[p.c].color})`);
+  el.innerHTML = `<div class="num">${p.no}</div><div>
+    <div class="dmeta">${CATS[p.c].short} · ${p.w}${p.w==="Centro"?" · ~5 km da casa":""}</div>
+    <div class="dname">${p.n}</div><div class="daddr">${p.a}</div><div class="note">${p.t}</div>
+    <div class="actions"><a class="btn" href="${gDir(p)}" target="_blank" rel="noopener">Rota no Google Maps</a><a class="btn ghost" href="${waze(p)}" target="_blank" rel="noopener">Waze</a><button class="btn soft" type="button" id="toList">Ver na lista</button></div></div>`;
+  document.getElementById("toList").onclick=()=>{const c=document.getElementById("p-"+p.id); c&&c.scrollIntoView({behavior:"smooth",block:"center"});};
+}
+
+function legend(){
+  const el = document.getElementById("legend");
+  const all = [["todos",{short:"Tudo",color:"--navy"}], ...Object.entries(CATS)];
+  el.innerHTML = all.map(([k,v])=>`<button class="chip" type="button" id="lg-${k}" data-k="${k}" aria-pressed="${cat===k}" style="--cc:var(${v.color})"><span class="dot"></span>${v.short}</button>`).join("");
+  el.onclick = e=>{const b=e.target.closest(".chip"); if(!b) return; setCat(b.dataset.k);};
+}
+
+function amen(){
+  const el = document.getElementById("amen");
+  el.innerHTML = Object.entries(CATS).map(([k,v])=>`<button class="am" type="button" id="am-${k}" data-k="${k}" style="--cc:var(${v.color})">
+      <span class="row"><span class="ok">${check}</span><span class="lbl">${v.short}</span></span>
+      <span class="sub">${PLACES.filter(p=>p.c===k).length} lugares · ${v.sub}</span></button>`).join("");
+  el.onclick = e=>{const b=e.target.closest(".am"); if(!b) return; setCat(b.dataset.k); document.getElementById("h-map").scrollIntoView({behavior:"smooth"});};
+}
+
+function list(){
+  const out = document.getElementById("out");
+  let html = "";
+  for(const [k,v] of Object.entries(CATS)){
+    if(cat!=="todos" && cat!==k) continue;
+    const g = PLACES.filter(p=>p.c===k);
+    html += `<div class="cathead" style="--cc:var(${v.color})"><span class="dot"></span><h3>${v.label}</h3><span class="n">${g.length}</span></div><div class="list">`;
+    html += g.map(p=>`<article class="place${sel===p.id?" hl":""}" id="p-${p.id}" style="--cc:var(${v.color})">
+      <button class="num" type="button" data-id="${p.id}" aria-label="Mostrar ${p.n} no mapa" style="border:0">${p.no}</button>
+      <div class="pname">${p.n}</div>
+      <div class="daddr">${p.a}</div>
+      <div class="note">${p.t}</div>
+      <div class="actions"><a class="btn" href="${gDir(p)}" target="_blank" rel="noopener">Rota</a><a class="btn ghost" href="${waze(p)}" target="_blank" rel="noopener">Waze</a><a class="btn ghost" href="${gMap(p)}" target="_blank" rel="noopener">Google Maps</a></div>
+    </article>`).join("") + `</div>`;
+  }
+  out.innerHTML = html;
+  out.querySelectorAll("button.num").forEach(b=>b.onclick=()=>select(b.dataset.id,true));
+}
+
+function setCat(k){cat=k; if(sel && k!=="todos" && PLACES.find(p=>p.id===sel).c!==k) sel=null; renderAll();}
+function select(id,scrollToMap){
+  sel = (sel===id && !scrollToMap)?null:id; renderAll();
+  if(scrollToMap) document.getElementById("h-map").scrollIntoView({behavior:"smooth"});
+  const p=PLACES.find(x=>x.id===sel), sc=document.getElementById("mapscroll");
+  if(p && sc.scrollWidth>sc.clientWidth){const k=sc.scrollWidth/800; sc.scrollTo({left:p.x*k-sc.clientWidth/2,behavior:"smooth"});}
+}
+function renderAll(){drawMap();detail();legend();amen();list();}
+renderAll();
+// on narrow screens start the map centred on the town
+(()=>{const sc=document.getElementById("mapscroll"); if(sc.scrollWidth>sc.clientWidth){const k=sc.scrollWidth/800; sc.scrollLeft=420*k-sc.clientWidth/2;}})();
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",renderAll);
+new MutationObserver(renderAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+
+document.getElementById("copyHome").addEventListener("click",async e=>{
+  const txt="Chácara Rancho Fundo, Embu-Guaçu - SP, 06910-770 (-23.793139, -46.799183)";
+  try{await navigator.clipboard.writeText(txt); e.target.textContent="Endereço copiado";}
+  catch{e.target.textContent=txt;}
+  setTimeout(()=>e.target.textContent="Copiar endereço",2500);
+});
+</script>
+</body>
+</html>
