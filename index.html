@@ -3,160 +3,511 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Guia do hóspede Mýra Villas: mercados, atacado, padaria, saúde, bancos, restaurantes e natureza em Embu-Guaçu, com rotas a partir da casa.">
-<meta property="og:title" content="Guia da Região · Mýra Villas">
-<meta property="og:description" content="Tudo o que você precisa em Embu-Guaçu, a cerca de 5 km da casa.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#1b3768">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Guia da Região · Mýra Villas</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Guia de hospedagem da Mýra Villas, refúgio grego em Embu-Guaçu: Wi-Fi, regras da casa, piscinas, contatos, checklist de saída e mapa da região.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Mýra Villas · Guia do Hóspede">
+<meta property="og:description" content="Troque pressa por presença. Tudo sobre a sua estadia e a região de Embu-Guaçu.">
+<meta property="og:image" content="img/capa.jpg">
+<meta name="theme-color" content="#153657">
+<title>Mýra Villas · Guia do Hóspede</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Crimson+Pro:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700;900&display=swap">
 <style>
-/* Layout: Mýra Villas guest guide — navy brand band, illustrated (not-to-scale) map with numbered pins + detail panel, amenity checklist, numbered list */
+/* Layout: one guest site joining the printed manual + region guide. Magazine paper (cream) + navy, serif chapter titles, text/photo spreads, sticky chapter nav, illustrated map. */
 :root{
-  --navy:#1b3768; --navy-deep:#122849; --aegean:#2f6fb5; --white:#ffffff; --stone:#eef1f5; --bougain:#d23a73;
-  --bg:#f6f8fb; --surface:#ffffff; --fg:#14233f; --muted:#5d6b82; --line:#dbe2ec; --soft:#e7eef8;
-  --c-mercado:#2f6fb5; --c-atacado:#1b3768; --c-padaria:#b9832f; --c-restaurante:#d23a73; --c-fastfood:#e07b26; --c-saude:#16958c; --c-banco:#6a7891; --c-natureza:#5b8a47;
-  --font-display:"Cinzel", "Trajan Pro", Georgia, serif;
-  --font-body:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --navy:#153657; --navy-2:#0f2a45; --aegean:#2f6fb5; --bougain:#cf2f6e; --sand:#c9a46a;
+  --bg:#f6f3ec; --paper:#fffdf8; --fg:#16304f; --muted:#5f6d80; --line:#e2dccf; --soft:#ece6d9; --alert-bg:#153657; --alert-fg:#ffffff;
+  --c-mercado:#2f6fb5; --c-atacado:#153657; --c-padaria:#b9832f; --c-restaurante:#cf2f6e; --c-fastfood:#e07b26; --c-saude:#16958c; --c-banco:#6a7891; --c-natureza:#5b8a47;
+  --font-brand:"Cinzel", "Trajan Pro", Georgia, serif;
+  --font-display:"Crimson Pro", Georgia, "Times New Roman", serif;
+  --font-body:"Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0d1a30; --surface:#142442; --fg:#e8eef8; --muted:#a3b2c9; --line:#25385c; --soft:#1b2f54;
-  --aegean:#6aa5e8; --bougain:#ef6c9c;
+  --bg:#0c1b2d; --paper:#12243a; --fg:#e9eef6; --muted:#a6b3c6; --line:#243a57; --soft:#1a2f4a; --alert-bg:#e9eef6; --alert-fg:#0f2a45;
+  --aegean:#6aa5e8; --bougain:#ef6c9c; --sand:#e0be86;
   --c-mercado:#6aa5e8; --c-atacado:#9db5e3; --c-padaria:#e0b066; --c-restaurante:#ef6c9c; --c-fastfood:#f29a52; --c-saude:#4cc7bd; --c-banco:#a8b5ca; --c-natureza:#8fbf78;
   color-scheme:dark }}
 :root[data-theme="dark"]{
-  --bg:#0d1a30; --surface:#142442; --fg:#e8eef8; --muted:#a3b2c9; --line:#25385c; --soft:#1b2f54;
-  --aegean:#6aa5e8; --bougain:#ef6c9c;
+  --bg:#0c1b2d; --paper:#12243a; --fg:#e9eef6; --muted:#a6b3c6; --line:#243a57; --soft:#1a2f4a; --alert-bg:#e9eef6; --alert-fg:#0f2a45;
+  --aegean:#6aa5e8; --bougain:#ef6c9c; --sand:#e0be86;
   --c-mercado:#6aa5e8; --c-atacado:#9db5e3; --c-padaria:#e0b066; --c-restaurante:#ef6c9c; --c-fastfood:#f29a52; --c-saude:#4cc7bd; --c-banco:#a8b5ca; --c-natureza:#8fbf78;
   color-scheme:dark }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.55}
-.inner{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65}
+.inner{max-width:1100px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+img{display:block;max-width:100%}
 
-/* brand band */
-.hero{background:var(--navy);color:#fff;margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 34px);padding-bottom:0}
-.hero .inner{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;padding-block:0 30px}
-@media (max-width:640px){.hero .inner{grid-template-columns:1fr;gap:14px}}
-.seal{width:104px;height:104px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 5px var(--navy),0 0 0 6px rgba(255,255,255,.35)}
-.seal b{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:.06em;line-height:1;display:block}
-.seal small{font-family:var(--font-display);font-size:9.5px;letter-spacing:.32em;display:block;margin-top:5px}
-.seal svg{width:22px;height:22px;display:block;margin:0 auto 6px}
-.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.8;font-weight:600}
-h1{font-family:var(--font-display);font-weight:600;font-size:clamp(28px,5vw,44px);line-height:1.1;margin:6px 0 8px;text-wrap:balance;letter-spacing:.01em}
-.hero p{margin:0;max-width:60ch;opacity:.9}
-.homebar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:14px;font-size:13.5px}
-.homebar .addr{opacity:.85}
-.meander{height:14px;background-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 13H6V3H18V9H11V6' fill='none' stroke='%23ffffff' stroke-opacity='.55' stroke-width='1.6'/%3E%3Cpath d='M14 13H28' fill='none' stroke='%23ffffff' stroke-opacity='.55' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:repeat-x;background-position:0 0}
-.bwhite{font:600 13px var(--font-body);text-decoration:none;color:var(--navy);background:#fff;padding:7px 13px;border-radius:999px;border:0;cursor:pointer}
-.bline{font:600 13px var(--font-body);color:#fff;background:transparent;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.6);cursor:pointer}
+/* ---------- top nav ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--navy)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.18)}
+.nav .inner{display:flex;align-items:center;gap:18px;height:56px}
+.wordmark{font-family:var(--font-brand);font-weight:600;letter-spacing:.14em;font-size:16px;text-decoration:none;white-space:nowrap}
+.navlinks{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:7px 11px;border-radius:999px;white-space:nowrap;opacity:.85}
+.navlinks a:hover,.navlinks a.on{background:rgba(255,255,255,.14);opacity:1}
+@media (max-width:700px){.nav .inner{gap:10px}.wordmark{font-size:14px}}
 
-main{padding-block:30px 50px}
-h2{font-family:var(--font-display);font-weight:600;font-size:24px;margin:0;letter-spacing:.02em;color:var(--fg)}
-.sechead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;margin-bottom:12px}
-.sechead p{margin:0;color:var(--muted);font-size:13.5px}
-section+section{margin-top:40px}
+/* ---------- cover ---------- */
+.cover{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:min(78vh,640px);background:var(--navy);color:#fff}
+.cover .panel{display:flex;flex-direction:column;justify-content:space-between;gap:30px;padding:48px max(28px,env(safe-area-inset-left,0px)) 34px}
+.cover .photo{background:#9cc3e6 url("img/capa.jpg") center/cover no-repeat;min-height:300px}
+@media (max-width:820px){.cover{grid-template-columns:1fr}.cover .photo{order:-1;min-height:46vh}}
+.logo{display:grid;justify-items:start;gap:6px}
+.logo svg{width:46px;height:auto}
+.logo .l1{font-family:var(--font-brand);font-size:clamp(40px,6vw,62px);font-weight:500;letter-spacing:.06em;line-height:1}
+.logo .l2{font-family:var(--font-brand);font-size:clamp(14px,1.8vw,18px);letter-spacing:.42em;padding-left:.2em}
+.cover h1{font-family:var(--font-display);font-weight:500;font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin:0 0 6px}
+.cover .motto{font-family:var(--font-display);font-style:italic;font-size:21px;opacity:.9;margin:0}
+.cover .where{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.75;font-weight:700}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cta{font:700 14px var(--font-body);text-decoration:none;padding:10px 16px;border-radius:999px;background:#fff;color:var(--navy);border:0;cursor:pointer}
+.cta.line{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.55)}
 
-/* map */
-.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+/* ---------- quick facts ---------- */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:-34px;position:relative;z-index:2}
+@media (max-width:900px){.facts{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:18px}}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 10px 30px rgba(21,54,87,.10);display:grid;gap:4px;align-content:start;min-width:0}
+.fact .k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--aegean)}
+.fact .v{font-family:var(--font-display);font-size:22px;font-weight:600;line-height:1.2;overflow-wrap:anywhere}
+.fact .s{font-size:13.5px;color:var(--muted)}
+.mini{font:700 12.5px var(--font-body);color:var(--navy);background:var(--soft);border:0;border-radius:999px;padding:6px 12px;cursor:pointer;text-decoration:none;justify-self:start;margin-top:4px}
+:root[data-theme="dark"] .mini{color:var(--fg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mini{color:var(--fg)}}
+.minirow{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ---------- chapters ---------- */
+.chapter{padding-block:64px 8px;scroll-margin-top:64px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:900;color:var(--aegean);display:flex;align-items:center;gap:10px}
+.eyebrow::after{content:"";height:1px;width:48px;background:currentColor;opacity:.5}
+h2{font-family:var(--font-display);font-weight:500;font-size:clamp(32px,4.4vw,46px);line-height:1.05;margin:8px 0 16px;text-wrap:balance}
+h3{font-family:var(--font-display);font-weight:600;font-size:24px;line-height:1.15;margin:0 0 8px}
+.lede{font-size:18px;max-width:62ch;color:var(--fg)}
+.spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.spread.rev .media{order:-1}
+@media (max-width:820px){.spread{grid-template-columns:1fr;gap:22px}.spread.rev .media{order:0}}
+.media{display:grid;gap:10px}
+.media.two{grid-template-columns:1fr 1fr}
+.media img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/3;background:var(--soft)}
+.media img.tall{aspect-ratio:3/4}
+.media figcaption{font-size:12.5px;color:var(--muted);font-style:italic;grid-column:1/-1}
+.prose p{margin:0 0 14px;max-width:64ch}
+.rules{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:9px}
+.rules li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;align-items:start}
+.rules li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bougain);margin-top:9px;justify-self:center}
+.block{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.block h4{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;margin:0 0 6px;color:var(--navy)}
+:root[data-theme="dark"] .block h4{color:var(--fg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .block h4{color:var(--fg)}}
+.alert{background:var(--alert-bg);color:var(--alert-fg);border-radius:6px;padding:16px 18px;margin:18px 0;display:grid;gap:2px}
+.alert b{font-family:var(--font-body);font-weight:900;letter-spacing:.03em;font-size:16px;text-transform:uppercase}
+.alert span{font-size:14px;opacity:.9}
+.note-box{background:var(--soft);border-left:3px solid var(--bougain);padding:12px 16px;border-radius:0 6px 6px 0;margin:14px 0;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+.card h3{font-size:21px}
+.card p{margin:0 0 8px;font-size:15px}
+
+/* faq */
+.faq{display:grid;gap:8px;margin-top:6px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:0 16px}
+.faq summary{cursor:pointer;font-weight:700;padding:13px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";font-weight:400;font-size:20px;line-height:1;color:var(--aegean)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 14px}
+
+/* ---------- region / map ---------- */
+.region{background:var(--paper);border-block:1px solid var(--line);margin-top:64px;padding-block:56px 50px;scroll-margin-top:56px}
+.region .chapter{padding:0}
+.mapbox{background:var(--bg);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:18px}
 .mapscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .mapscroll svg{display:block;width:100%;min-width:700px;height:auto}
 .pin{cursor:pointer}
 .pin:focus-visible{outline:none}
 .pin:focus-visible circle.body{stroke:#ffd34d;stroke-width:3.5}
 .pin.dim{opacity:.22}
-.detail{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;border-top:1px solid var(--line)}
-.num{width:34px;height:34px;border-radius:50%;background:var(--cc);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px;flex:none}
-.dname{font-weight:700;font-size:16.5px}
-.dmeta{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cc);font-weight:700}
-.daddr{color:var(--muted);font-size:13.5px}
-.legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
-.chip{font:600 12.5px var(--font-body);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:6px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.detail{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;border-top:1px solid var(--line);background:var(--paper)}
+.num{width:34px;height:34px;border-radius:50%;background:var(--cc);color:#fff;font-weight:900;display:grid;place-items:center;font-size:14px;flex:none}
+.dname{font-weight:900;font-size:17px}
+.dmeta{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cc);font-weight:900}
+.daddr{color:var(--muted);font-size:14px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--line);background:var(--paper)}
+.chip{font:700 12.5px var(--font-body);border:1px solid var(--line);background:var(--paper);color:var(--fg);padding:6px 11px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
 .chip .dot{width:10px;height:10px;border-radius:50%;background:var(--cc,var(--fg))}
 .chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
-.chip:focus-visible,.btn:focus-visible,.am:focus-visible,.place:focus-visible{outline:2px solid var(--bougain);outline-offset:2px}
-.maphint{font-size:12px;color:var(--muted);padding:0 18px 14px;margin:0}
-
-/* amenities */
-.amen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.maphint{font-size:12.5px;color:var(--muted);padding:0 18px 14px;margin:0;background:var(--paper)}
+.amen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:22px}
 @media (max-width:760px){.amen{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.am{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px 14px;display:grid;gap:2px;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.am{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:2px;text-align:left;cursor:pointer;font:inherit;color:inherit}
 .am:hover{border-color:var(--cc)}
 .am .row{display:flex;align-items:center;gap:9px}
 .am .ok{width:22px;height:22px;border-radius:50%;background:var(--cc);display:grid;place-items:center;flex:none}
 .am .ok svg{width:12px;height:12px}
-.am .lbl{font-weight:700;font-size:14.5px}
+.am .lbl{font-weight:900;font-size:14.5px}
 .am .sub{font-size:12px;color:var(--muted);padding-left:31px}
-
-/* list */
-.cathead{display:flex;align-items:center;gap:10px;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.cathead h3{font-family:var(--font-display);font-weight:600;font-size:18px;margin:0;letter-spacing:.02em}
+.cathead{display:flex;align-items:center;gap:10px;margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.cathead h3{font-size:21px;margin:0}
 .cathead .dot{width:11px;height:11px;border-radius:50%;background:var(--cc)}
 .cathead .n{margin-left:auto;font-size:12.5px;color:var(--muted)}
 .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 @media (max-width:700px){.list{grid-template-columns:1fr}}
-.place{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-content:start;min-width:0}
-.place .num{width:28px;height:28px;font-size:12.5px;grid-row:span 4;cursor:pointer}
+.place{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;align-content:start;min-width:0}
+.place .num{width:28px;height:28px;font-size:12.5px;grid-row:span 4;cursor:pointer;border:0}
 .place.hl{border-color:var(--bougain);box-shadow:0 0 0 3px color-mix(in srgb,var(--bougain) 18%,transparent)}
-.pname{font-weight:700;font-size:15px}
-.note{font-size:13.5px}
+.pname{font-weight:900;font-size:15px}
+.pnote{font-size:14px}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.btn{font:600 12.5px var(--font-body);text-decoration:none;color:#fff;background:var(--navy);padding:6px 12px;border-radius:999px;border:0;cursor:pointer}
-:root:not([data-theme="light"]) .btn{}
+.btn{font:700 12.5px var(--font-body);text-decoration:none;color:#fff;background:var(--navy);padding:7px 13px;border-radius:999px;border:0;cursor:pointer}
 .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
 .btn.soft{background:var(--soft);color:var(--fg)}
-.foot{margin-top:34px;font-size:12.5px;color:var(--muted);max-width:75ch}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+.showall{margin-top:14px}
 
+/* ---------- contacts ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:16px}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.wa{display:grid;gap:10px}
+.wa a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--navy);color:#fff;text-decoration:none;padding:14px 18px;border-radius:12px;font-weight:900;font-size:18px;font-variant-numeric:tabular-nums}
+.wa a small{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.sos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.sos div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center}
+.sos b{display:block;font-family:var(--font-display);font-size:30px;line-height:1;color:var(--bougain);font-variant-numeric:tabular-nums}
+.sos span{font-size:12px;font-weight:700;color:var(--muted)}
+
+/* ---------- checklist ---------- */
+.check{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (max-width:620px){.check{grid-template-columns:1fr}}
+.check label{display:flex;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--navy);flex:none}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.progress{display:flex;align-items:center;gap:12px;margin:4px 0 14px;font-weight:700;font-size:14px}
+.bar{flex:1;height:8px;background:var(--soft);border-radius:99px;overflow:hidden;max-width:320px}
+.bar i{display:block;height:100%;background:var(--bougain);width:0;transition:width .3s}
+
+/* ---------- goodbye / footer ---------- */
+.bye{background:var(--navy);color:#fff;margin-top:70px}
+.bye .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;align-items:stretch}
+.bye .txt{padding:56px 36px 56px 0}
+.bye h2{color:#fff}
+.bye img{width:100%;height:100%;object-fit:cover;min-height:280px}
+@media (max-width:820px){.bye .inner{grid-template-columns:1fr}.bye .txt{padding:44px 0 24px}}
+.meander{height:14px;background-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 13H6V3H18V9H11V6' fill='none' stroke='%23ffffff' stroke-opacity='.5' stroke-width='1.6'/%3E%3Cpath d='M14 13H28' fill='none' stroke='%23ffffff' stroke-opacity='.5' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:repeat-x}
+footer{background:var(--navy-2);color:#cfdbea;text-align:center;font-size:13px;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+footer b{font-family:var(--font-brand);letter-spacing:.2em;color:#fff;font-weight:600}
+
+:focus-visible{outline:2px solid var(--bougain);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
-<body>
-<div class="hero">
+<body style="margin:0">
+
+<nav class="nav" aria-label="Capítulos">
   <div class="inner">
-    <div class="seal" aria-hidden="true"><div>
-      <svg viewBox="0 0 24 24"><path d="M6 21V10a6 6 0 0 1 12 0v11Z" fill="#fff"/><path d="M8 15c1.3 1 2.7 1 4 0s2.7-1 4 0M8 18c1.3 1 2.7 1 4 0s2.7-1 4 0" stroke="#1b3768" stroke-width="1.4" fill="none"/></svg>
-      <b>MÝRA</b><small>VILLAS</small></div></div>
-    <div>
-      <div class="kicker">Guia do hóspede · Embu-Guaçu</div>
-      <h1>Sossego no verde, com tudo a 5 km</h1>
-      <p>Seu refúgio grego pertinho de SP fica na Chácara Rancho Fundo. O centro de Embu-Guaçu, a cerca de 5 km, tem mercado, atacado, padaria, açougue, farmácia, pronto-socorro, bancos e boa comida.</p>
-      <div class="homebar">
-        <span class="addr">Chácara Rancho Fundo · Embu-Guaçu – SP · 06910-770</span>
-        <a class="bwhite" href="https://www.google.com/maps/search/?api=1&query=-23.793139,-46.799183" target="_blank" rel="noopener">Abrir a casa no Google Maps</a>
-        <button class="bline" id="copyHome" type="button">Copiar endereço</button>
-      </div>
+    <a class="wordmark" href="#inicio">MÝRA VILLAS</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#chegada">Chegada</a>
+      <a href="#casa">A casa</a>
+      <a href="#regras">Regras</a>
+      <a href="#regiao">Região</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contatos">Contatos</a>
+      <a href="#saida">Saída</a>
     </div>
   </div>
-  <div class="meander" aria-hidden="true"></div>
-</div>
+</nav>
 
-<main class="inner">
-  <section aria-labelledby="h-map">
-    <div class="sechead"><h2 id="h-map">Mapa ilustrado</h2><p>Toque num número para ver o lugar e traçar a rota</p></div>
-    <div class="mapbox">
-      <div class="mapscroll" id="mapscroll"><svg id="map" viewBox="0 0 800 620" role="img" aria-label="Mapa ilustrado de Embu-Guaçu com a casa Mýra Villas e os comércios numerados"></svg></div>
-      <div class="detail" id="detail" aria-live="polite"></div>
-      <div class="legend" id="legend" role="group" aria-label="Filtrar o mapa por categoria"></div>
-      <p class="maphint">Mapa ilustrativo, fora de escala: mostra a direção e a vizinhança de cada lugar. Para a rota exata, use os botões do Google Maps ou Waze.</p>
+<header class="cover" id="inicio">
+  <div class="panel">
+    <div class="logo" aria-label="Mýra Villas">
+      <svg viewBox="0 0 40 52" aria-hidden="true"><path d="M4 50V20a16 16 0 0 1 32 0v30Z" fill="#fff"/><path d="M10 34c3.3 2.4 6.7 2.4 10 0s6.7-2.4 10 0M10 41c3.3 2.4 6.7 2.4 10 0s6.7-2.4 10 0" stroke="#153657" stroke-width="2.6" fill="none" stroke-linecap="round"/><rect x="16" y="14" width="8" height="10" rx="4" fill="#153657"/></svg>
+      <span class="l1">MÝRA</span><span class="l2">VILLAS</span>
+    </div>
+    <div>
+      <h1>Guia de hospedagem</h1>
+      <p class="motto">Troque pressa por presença.</p>
+      <div class="ctas">
+        <a class="cta" href="#chegada">Wi-Fi e chegada</a>
+        <a class="cta line" href="#regiao">Mapa da região</a>
+        <a class="cta line" href="https://wa.me/5511965066820" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="where">Embu-Guaçu / Brasil</div>
+  </div>
+  <div class="photo" role="img" aria-label="Fachada branca da Mýra Villas com piscina e escadaria, sob céu azul"></div>
+</header>
+<div class="meander" aria-hidden="true"></div>
+
+<main>
+  <!-- quick facts -->
+  <div class="inner" id="chegada" style="scroll-margin-top:72px">
+    <div class="facts">
+      <div class="fact"><span class="k">Wi-Fi</span><span class="v">Myravillas</span><span class="s">A senha é enviada na confirmação da reserva.</span></div>
+      <div class="fact"><span class="k">Endereço</span><span class="v">Av. Copacabana, 13</span><span class="s">Chácara Rancho Fundo, Embu-Guaçu – SP, 06910-770</span><div class="minirow"><a class="mini" href="https://www.google.com/maps/dir/?api=1&destination=-23.793139,-46.799183" target="_blank" rel="noopener">Como chegar</a><button class="mini" id="copyAddr" type="button">Copiar</button></div></div>
+      <div class="fact"><span class="k">Administração</span><span class="v">(11) 96506-6820</span><span class="s">ou (11) 98361-1352, pelo WhatsApp</span><a class="mini" href="https://wa.me/5511965066820" target="_blank" rel="noopener">Abrir WhatsApp</a></div>
+      <div class="fact"><span class="k">Capacidade</span><span class="v">Até 15 pessoas</span><span class="s">Silêncio das 22h às 8h</span></div>
+    </div>
+  </div>
+
+  <!-- hospedagem -->
+  <section class="inner chapter" aria-labelledby="h-hosp">
+    <div class="spread">
+      <div class="prose">
+        <div class="eyebrow">Hospedagem</div>
+        <h2 id="h-hosp">Bem-vindo à sua chegada</h2>
+        <p class="lede">Confira os horários de entrada e saída, capacidade, endereço e instruções de acesso na confirmação da reserva. Entradas antecipadas e saídas tardias dependem de autorização.</p>
+        <ul class="rules">
+          <li><span>Somente hóspedes cadastrados podem permanecer na propriedade.</span></li>
+          <li><span>Visitantes e fornecedores precisam de autorização prévia.</span></li>
+          <li><span>Em caso de dúvidas, fale com a administração pelo canal utilizado na reserva.</span></li>
+        </ul>
+      </div>
+      <figure class="media" style="margin:0"><img src="img/fachada.jpg" alt="Entrada da casa com estacionamento e escadaria até a piscina"></figure>
     </div>
   </section>
 
-  <section aria-labelledby="h-amen">
-    <div class="sechead"><h2 id="h-amen">Tem em Embu-Guaçu</h2><p>Toque para filtrar</p></div>
-    <div class="amen" id="amen"></div>
+  <!-- a casa -->
+  <section class="inner chapter" id="casa" aria-labelledby="h-casa">
+    <div class="spread rev">
+      <div class="prose">
+        <div class="eyebrow">Boas-vindas e arquitetura</div>
+        <h2 id="h-casa">Uma pequena vila grega no meio do verde</h2>
+        <p class="lede">Nossa arquitetura é inspirada nas pequenas vilas gregas. As paredes brancas, portas e janelas azuis, primaveras rosa-magenta e a paginação irregular dos pisos com juntas brancas traduzem a essência mediterrânea. Cada detalhe convida a desacelerar e apreciar a natureza.</p>
+        <p>Um espaço para descansar, compartilhar momentos e criar memórias. Aproveite nossas duas piscinas, churrasqueira, jardim e espaços de convivência. Cuide da casa com o carinho com que a preparamos para você.</p>
+        <p>Na escada, um painel fotográfico cria uma perspectiva para o Mediterrâneo. Os quadros decorativos reforçam a identidade grega.</p>
+      </div>
+      <figure class="media two" style="margin:0">
+        <img class="tall" src="img/buganvilia.jpg" alt="Varanda branca com primavera rosa-magenta ao pôr do sol">
+        <img class="tall" src="img/mediterraneo.jpg" alt="Painel da escada com janela azul aberta para o mar Mediterrâneo">
+      </figure>
+    </div>
   </section>
 
-  <section aria-labelledby="h-list">
-    <div class="sechead"><h2 id="h-list">Todos os lugares</h2></div>
-    <div id="out"></div>
+  <!-- piscinas -->
+  <section class="inner chapter" id="piscinas" aria-labelledby="h-pisc">
+    <div class="spread">
+      <div class="prose">
+        <div class="eyebrow">Piscinas e iluminação noturna</div>
+        <h2 id="h-pisc">Duas piscinas, de dia e à noite</h2>
+        <p>Nossas duas piscinas convidam à diversão e ao descanso. Ao anoitecer, a iluminação cria uma atmosfera acolhedora.</p>
+        <div class="alert" role="note"><b>Em hipótese nenhuma durma com a cascata ligada.</b><span>Desligue-a obrigatoriamente antes de dormir.</span></div>
+        <ul class="rules">
+          <li><span>Não use vidro, não corra em áreas molhadas nem faça mergulhos perigosos.</span></li>
+          <li><span>Crianças devem estar sob supervisão constante de um adulto.</span></li>
+          <li><span>Use roupas adequadas, não leve alimentos à água e saia da piscina em caso de tempestade ou raios.</span></li>
+        </ul>
+        <div class="block"><h4>Equipamentos das piscinas</h4><p>É proibido manusear bombas, filtros, registros, válvulas, disjuntores ou outros equipamentos técnicos.</p></div>
+        <div class="block"><h4>Funcionamento da cascata</h4><p>Utilize exclusivamente o botão CASCATA, no quadro de luz da piscina, para ligar e desligar a cascata, conforme o vídeo enviado pela administração. A cascata pode ser utilizada durante o uso da piscina.</p></div>
+        <div class="block"><h4>Iluminação das piscinas</h4><p>O controle das luzes está parafusado na parede, dentro do banheiro da área da piscina. Utilize-o conforme o vídeo enviado pela administração. Não retire o controle do local.</p></div>
+        <div class="block"><h4>Guarda-sóis</h4><p>Disponibilizamos dois guarda-sóis. Pedimos que os mantenham fechados após o uso da piscina e ao início de chuva ou ventos fortes, para evitar avarias e acidentes.</p></div>
+      </div>
+      <figure class="media" style="margin:0">
+        <img class="tall" src="img/piscina-noite.jpg" alt="Piscina iluminada à noite com hóspedes brincando">
+      </figure>
+    </div>
   </section>
 
-  <p class="foot">Informações reunidas de guias e diretórios públicos (Tripadvisor, Tiendeo, Restaurant Guru, páginas dos estabelecimentos, AllTrails). Horários mudam: confira no Google Maps antes de sair. Emergência: 192 (SAMU) · 193 (Bombeiros) · 190 (Polícia).</p>
+  <!-- cozinha -->
+  <section class="inner chapter" id="cozinha" aria-labelledby="h-coz">
+    <div class="spread rev">
+      <div class="prose">
+        <div class="eyebrow">Cozinha e churrasqueira</div>
+        <h2 id="h-coz">Cozinha completa para até 15 pessoas</h2>
+        <p>A cozinha conta com fogão, forno, micro-ondas, geladeiras, liquidificador, copos, pratos e talheres para uso diário. A torneira da pia possui filtro de água integrado. Os utensílios são conferidos e os equipamentos são testados antes de cada hospedagem.</p>
+        <ul class="rules">
+          <li><span>Lave os utensílios após o uso, recolha restos de alimentos e não descarte óleo nas pias.</span></li>
+          <li><span>Proteja as bancadas de panelas quentes.</span></li>
+          <li><span>Não deixe fogo ou equipamentos ligados sem supervisão. Feche o gás, quando aplicável, e apague completamente as brasas.</span></li>
+        </ul>
+        <div class="note-box"><b>Voltagem das tomadas:</b> a maioria é de 127 V (110 V). Há tomadas de 220 V na área externa, junto à pia da churrasqueira. Confira antes de conectar aparelhos.</div>
+      </div>
+      <figure class="media" style="margin:0"><img class="tall" src="img/churrasqueira.jpg" alt="Churrasqueira com pia, janelas azuis e piso de pedra"></figure>
+    </div>
+  </section>
+
+  <!-- jardim -->
+  <section class="inner chapter" id="jardim" aria-labelledby="h-jard">
+    <div class="spread">
+      <div class="prose">
+        <div class="eyebrow">Jardim, fogueira e espaço infantil</div>
+        <h2 id="h-jard">Noites ao redor da fogueira</h2>
+        <p>Acenda a fogueira exclusivamente na parte interna do espaço externo destinado a ela (fire pit). Não é necessária autorização prévia.</p>
+        <ul class="rules">
+          <li><span>Não utilize combustíveis líquidos e evite acender fogo com vento forte.</span></li>
+          <li><span>Apague completamente as brasas.</span></li>
+          <li><span>Preserve flores e plantas, não alimente animais silvestres e descarte resíduos corretamente.</span></li>
+        </ul>
+        <div class="block"><h4>Espaço infantil</h4><p>Balanços e casinha devem ser usados com supervisão de um adulto. Respeite as limitações dos brinquedos e mantenha crianças afastadas do fogo e de equipamentos técnicos.</p></div>
+      </div>
+      <figure class="media" style="margin:0">
+        <img src="img/fogueira.jpg" alt="Fogueira acesa à noite no fire pit">
+        <img src="img/som-b.jpg" alt="Jardim com balanço azul e piso de pedra">
+      </figure>
+    </div>
+  </section>
+
+  <!-- quartos -->
+  <section class="inner chapter" id="quartos" aria-labelledby="h-quar">
+    <div class="eyebrow">Quartos, enxoval e conforto</div>
+    <h2 id="h-quar">O que trazer na mala</h2>
+    <div class="cards">
+      <div class="card"><h3>Toalhas</h3><p><b>Não disponibilizamos toalhas de banho, rosto ou piscina.</b> Cada hóspede deve trazer as suas.</p></div>
+      <div class="card"><h3>Roupa de cama</h3><p>Traga cobertas, lençóis e fronhas. Todas as camas e travesseiros têm capas protetoras impermeáveis e deixamos apenas um lençol fino para proteção e acabamento. Não retire as capas.</p></div>
+      <div class="card"><h3>Ventilação</h3><p>Ventiladores nas duas suítes e na sala, além de um ventilador de piso para usar conforme a necessidade. Desligue luzes e ventiladores quando não estiverem em uso.</p></div>
+    </div>
+    <ul class="rules" style="margin-top:18px">
+      <li><span>Não utilize lençóis ou capas protetoras como panos de limpeza ou de chão.</span></li>
+      <li><span>Evite manchas de maquiagem, alimentos, bebidas e bronzeadores. Não use as camas com roupas molhadas nem coma sobre elas.</span></li>
+      <li><span>Não descarte fraldas, absorventes ou lenços umedecidos nos vasos.</span></li>
+      <li><span>Danos e manchas permanentes poderão gerar cobrança de reposição, conforme as condições da reserva.</span></li>
+    </ul>
+  </section>
+
+  <!-- regras -->
+  <section class="inner chapter" id="regras" aria-labelledby="h-regras">
+    <div class="spread rev">
+      <div class="prose">
+        <div class="eyebrow">Regras da casa · som, eventos e animais</div>
+        <h2 id="h-regras">Cuide da casa como nós cuidamos</h2>
+        <ul class="rules">
+          <li><span>Preserve móveis, decoração e utensílios.</span></li>
+          <li><span>Não fume nos ambientes internos.</span></li>
+          <li><span>Não utilize glitter ou confetes.</span></li>
+          <li><span>Não altere a disposição dos móveis sem autorização.</span></li>
+          <li><span>Comunique danos e quebras imediatamente. Eventuais cobranças seguem as condições da reserva.</span></li>
+          <li><span>Mantenha os portões fechados e respeite a vizinhança.</span></li>
+        </ul>
+        <div class="block"><h4>Som e eventos</h4><p>Respeite a tranquilidade da vizinhança. Horário de silêncio proposto: 22h às 8h. Festas e fornecedores dependem de autorização prévia.</p></div>
+        <div class="block"><h4>Animais</h4><p>Somente mediante autorização. Recolha os resíduos e não permita a entrada deles nas piscinas.</p></div>
+      </div>
+      <figure class="media" style="margin:0"><img class="tall" src="img/fonte.jpg" alt="Fonte decorativa com cabeça de leão em parede branca" style="aspect-ratio:4/5"></figure>
+    </div>
+  </section>
+
+  <!-- natureza -->
+  <section class="inner chapter" id="natureza" aria-labelledby="h-nat">
+    <div class="spread">
+      <div class="prose">
+        <div class="eyebrow">Em sintonia com a natureza</div>
+        <h2 id="h-nat">Quando a chuva chega</h2>
+        <p>A Mýra Villas está em meio à natureza, onde o canto dos pássaros, o som da chuva e a tranquilidade fazem parte da experiência.</p>
+        <p>Em dias de chuvas intensas e ventos fortes, podem ocorrer interrupções temporárias no fornecimento de energia. O espaço conta com luminárias de emergência com autonomia estimada de 4 a 6 horas. O Wi-Fi também pode ficar indisponível durante uma queda de energia.</p>
+        <p>Aproveite para desacelerar: escute a chuva, reúna a família para jogos e conversas, leia e descanse. Durante tempestades, permaneça em ambientes protegidos e evite as piscinas e áreas externas. Em caso de interrupção prolongada, contate a administração.</p>
+      </div>
+      <figure class="media" style="margin:0"><img src="img/passaro.jpg" alt="Periquito azul pousado na borda da piscina"></figure>
+    </div>
+  </section>
+
+  <!-- região -->
+  <section class="region" id="regiao" aria-labelledby="h-reg">
+    <div class="inner chapter">
+      <div class="eyebrow">Recomendações · Embu-Guaçu</div>
+      <h2 id="h-reg">Sossego no verde, com tudo a 5 km</h2>
+      <p class="lede">O centro de Embu-Guaçu, a cerca de 5 km pela SP-214, tem mercado, atacado, padaria, açougue, farmácia, pronto-socorro, bancos e boa comida. Toque em um número no mapa para ver o lugar e traçar a rota a partir da casa.</p>
+      <div class="amen" id="amen"></div>
+      <div class="mapbox">
+        <div class="mapscroll" id="mapscroll"><svg id="map" viewBox="0 0 800 620" role="img" aria-label="Mapa ilustrado de Embu-Guaçu com a Mýra Villas e os comércios numerados"></svg></div>
+        <div class="detail" id="detail" aria-live="polite"></div>
+        <div class="legend" id="legend" role="group" aria-label="Filtrar o mapa por categoria"></div>
+        <p class="maphint">Mapa ilustrativo, fora de escala: mostra a direção e a vizinhança de cada lugar. Para a rota exata, use os botões do Google Maps ou Waze. Horários mudam: confira antes de sair.</p>
+      </div>
+      <div id="out"></div>
+      <div class="showall" id="showallWrap"><button class="btn soft" type="button" id="showall">Ver a lista completa (29 lugares)</button></div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section class="inner chapter" id="duvidas" aria-labelledby="h-faq">
+    <div class="eyebrow">Perguntas frequentes</div>
+    <h2 id="h-faq">Dúvidas comuns</h2>
+    <div class="faq">
+      <details><summary>Posso receber visitas?</summary><p>Somente com autorização da administração.</p></details>
+      <details><summary>Posso estender a estadia?</summary><p>Consulte disponibilidade e valores com a administração.</p></details>
+      <details><summary>Preciso fazer faxina?</summary><p>Não, mas deixe os ambientes organizados. Se algum objeto quebrar ou algum equipamento apresentar problema, avise a administração.</p></details>
+      <details><summary>Preciso levar toalhas?</summary><p>Sim. Não disponibilizamos toalhas de banho, rosto ou piscina.</p></details>
+      <details><summary>Preciso levar roupa de cama?</summary><p>Sim. Para seu conforto, leve cobertas, lençóis e fronhas. Deixamos apenas um lençol fino nas camas para melhor acabamento e proteção.</p></details>
+      <details><summary>Onde faço compras perto da casa?</summary><p>No centro de Embu-Guaçu, a cerca de 5 km. Veja o <a href="#regiao">mapa da região</a> com mercados, atacado, padaria, açougue, farmácias e restaurantes.</p></details>
+    </div>
+  </section>
+
+  <!-- contatos -->
+  <section class="inner chapter" id="contatos" aria-labelledby="h-cont">
+    <div class="eyebrow">Contatos e emergências</div>
+    <h2 id="h-cont">Estamos por perto</h2>
+    <div class="contact-grid">
+      <div class="wa">
+        <p style="margin:0">Administração Mýra Villas: dúvidas e suporte pelo WhatsApp.</p>
+        <a href="https://wa.me/5511965066820" target="_blank" rel="noopener"><span>(11) 96506-6820</span><small>WhatsApp</small></a>
+        <a href="https://wa.me/5511983611352" target="_blank" rel="noopener"><span>(11) 98361-1352</span><small>WhatsApp</small></a>
+        <p style="margin:6px 0 0;font-size:14px;color:var(--muted)">Endereço: Av. Copacabana, 13 – Chácara Rancho Fundo, Embu-Guaçu – SP, 06910-770.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 10px">Em emergência médica ou risco imediato, acione diretamente:</p>
+        <div class="sos">
+          <div><b>190</b><span>Polícia Militar</span></div>
+          <div><b>192</b><span>SAMU</span></div>
+          <div><b>193</b><span>Bombeiros</span></div>
+          <div><b>199</b><span>Defesa Civil</span></div>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin-top:12px">Não intervenha nas instalações elétricas, hidráulicas ou das piscinas. Em emergência, procure um local seguro e acione o serviço adequado. O pronto-socorro mais próximo está no <a href="#regiao" data-goto="ps">centro de Embu-Guaçu</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- saída -->
+  <section class="inner chapter" id="saida" aria-labelledby="h-saida">
+    <div class="spread rev">
+      <div>
+        <div class="eyebrow">Antes de ir embora</div>
+        <h2 id="h-saida">Checklist de saída</h2>
+        <div class="progress"><div class="bar"><i id="bar"></i></div><span id="count">0 de 12</span></div>
+        <ul class="check" id="check"></ul>
+      </div>
+      <figure class="media" style="margin:0"><img class="tall" src="img/som-a.jpg" alt="Varanda com primavera ao entardecer" style="aspect-ratio:4/5"></figure>
+    </div>
+  </section>
 </main>
 
+<section class="bye" aria-labelledby="h-bye">
+  <div class="meander" aria-hidden="true"></div>
+  <div class="inner">
+    <div class="txt">
+      <div class="eyebrow" style="color:#bcd3ee">Até breve!</div>
+      <h2 id="h-bye">Compartilhe suas memórias com a gente</h2>
+      <p>Esperamos que sua estadia tenha sido especial. Compartilhe sua avaliação pelo canal da reserva. Será um prazer receber você novamente.</p>
+      <p>Publique suas fotos e vídeos e marque <b>@myravillas_</b>. Amamos ver a Mýra Villas pelo seu olhar.</p>
+      <div class="ctas"><a class="cta" href="https://www.instagram.com/myravillas_/" target="_blank" rel="noopener">Instagram @myravillas_</a><a class="cta line" href="https://www.airbnb.com/h/myravillas" target="_blank" rel="noopener">Reservar de novo</a></div>
+    </div>
+    <img src="img/janela.jpg" alt="Janela azul com primavera rosa refletida em espelho">
+  </div>
+</section>
+<footer><b>MÝRA VILLAS</b> · Troque pressa por presença.</footer>
+
 <script>
+/* ---------- utilities ---------- */
+async function copy(btn, text, ok){
+  try{await navigator.clipboard.writeText(text); const t=btn.textContent; btn.textContent=ok; setTimeout(()=>btn.textContent=t,2200);}
+  catch{btn.textContent=text;}
+}
+document.getElementById("copyAddr").onclick=e=>copy(e.currentTarget,"Av. Copacabana, 13 - Chácara Rancho Fundo, Embu-Guaçu - SP, 06910-770","Copiado");
+
+/* nav highlight */
+(()=>{const links=[...document.querySelectorAll(".navlinks a")];const ids=links.map(a=>a.getAttribute("href").slice(1));
+ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id));}})},{rootMargin:"-45% 0px -50% 0px"});
+ ids.forEach(id=>{const el=document.getElementById(id); el&&io.observe(el);});})();
+
+/* checklist */
+(()=>{const items=["Recolher pertences pessoais","Lavar utensílios utilizados","Acondicionar o lixo","Retirar alimentos da geladeira","Desligar luzes e equipamentos","Desligar a cascata","Fechar torneiras e gás, quando aplicável","Apagar churrasqueira e fogueira","Conferir portas e janelas","Avisar sobre danos ou ocorrências","Devolver as chaves e informar a saída","Fechar os dois guarda-sóis"];
+ let saved={}; try{saved=JSON.parse(localStorage.getItem("myra-check")||"{}")}catch{}
+ const ul=document.getElementById("check");
+ ul.innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" id="ck${i}" ${saved[i]?"checked":""}><span>${t}</span></label></li>`).join("");
+ const upd=()=>{const n=ul.querySelectorAll("input:checked").length;document.getElementById("count").textContent=`${n} de ${items.length}`;document.getElementById("bar").style.width=(n/items.length*100)+"%";};
+ ul.addEventListener("change",e=>{const i=e.target.id.slice(2);saved[i]=e.target.checked;try{localStorage.setItem("myra-check",JSON.stringify(saved))}catch{}upd();});upd();})();
+
+/* ---------- region guide ---------- */
 const HOME = "-23.793139,-46.799183";
 const CATS = {
   mercado:{label:"Mercados", short:"Mercados", sub:"Extra, Dia e mais", color:"--c-mercado"},
@@ -168,7 +519,6 @@ const CATS = {
   banco:{label:"Bancos & caixas", short:"Bancos", sub:"Bradesco, Itaú, Caixa, BB", color:"--c-banco"},
   natureza:{label:"Natureza & lazer", short:"Natureza", sub:"cachoeira, pesqueiros", color:"--c-natureza"}
 };
-// x,y = position on the illustrated map (viewBox 800x620)
 const PLACES = [
   {id:"extra", n:"Extra Mercado", c:"mercado", w:"Centro", a:"Rua Boa Vista, 625 – Centro, Embu-Guaçu", t:"O maior mercado da cidade. Por volta das 7h às 22h.", x:428,y:342},
   {id:"dia", n:"Supermercado Dia", c:"mercado", w:"Centro", a:"Rua Coronel Luiz Tenório de Brito, 644 – Embu-Guaçu", t:"Para compras rápidas e preço baixo.", x:420,y:430},
@@ -202,7 +552,6 @@ const PLACES = [
 ];
 PLACES.forEach((p,i)=>p.no=i+1);
 const POSTOS = "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("posto de combustível perto de -23.793139,-46.799183");
-
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 const enc = encodeURIComponent;
 const dest = p => p.q || (p.a.includes(p.n.split(" ")[0]) ? p.a : p.n+", "+p.a);
@@ -210,40 +559,30 @@ const gDir = p => `https://www.google.com/maps/dir/?api=1&origin=${HOME}&destina
 const gMap = p => `https://www.google.com/maps/search/?api=1&query=${enc(dest(p))}`;
 const waze = p => `https://waze.com/ul?q=${enc(dest(p))}&navigate=yes`;
 const check = `<svg viewBox="0 0 12 12"><path d="M2.5 6.2 5 8.6 9.6 3.6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+let cat = "todos", sel = null, listOpen = false;
 
-let cat = "todos", sel = null;
-
-/* ---------- static illustration (drawn once) ---------- */
 function rng(seed){return()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};}
 function baseMap(){
   const r = rng(42);
-  const M = {land:"#e4eedb", hill:"#d3e3c6", hill2:"#c2d8b2", tree:"#7fa86a", tree2:"#5f8f4e", road:"#ffffff", roadEdge:"#c9d3df", town:"#f4f6f9", block:"#e3e8ef", water:"#9fcaf0", waterEdge:"#5f9fdc", navy:"#1b3768", ink:"#33415c"};
+  const M = {land:"#e6eedc", hill:"#d5e4c8", hill2:"#c4d9b4", tree:"#7fa86a", tree2:"#5f8f4e", road:"#ffffff", roadEdge:"#cdd5df", town:"#f8f5ee", block:"#e8e2d5", water:"#a3cdf0", waterEdge:"#5f9fdc", navy:"#153657", ink:"#33415c"};
   let s = `<defs>
     <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#b9cfa8"/></pattern>
     <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#0b1a33" flood-opacity=".35"/></filter>
   </defs>
   <rect width="800" height="620" fill="${M.land}"/><rect width="800" height="620" fill="url(#dots)" opacity=".6"/>`;
-  // hills
   [[90,120,150,90],[300,90,170,70],[720,160,140,110],[120,330,90,140],[620,600,220,90],[780,420,90,120],[520,170,90,60]].forEach(([cx,cy,rx,ry],i)=>{
-    s+=`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${i%2?M.hill2:M.hill}" opacity=".9"/>`;
-  });
-  // lakes
+    s+=`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${i%2?M.hill2:M.hill}" opacity=".9"/>`;});
   s+=`<path d="M600 395 q30 -22 70 -4 q28 16 8 40 q-30 26 -66 12 q-34 -14 -12 -48z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
       <path d="M520 530 q26 -20 62 -6 q22 14 2 34 q-28 20 -58 6 q-26 -14 -6 -34z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
       <path d="M680 270 q34 -16 66 4 q20 18 -4 36 q-34 18 -62 0 q-22 -18 0 -40z" fill="${M.water}" stroke="${M.waterEdge}" stroke-width="1.5"/>
-      <text x="713" y="248" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-style="italic" fill="${M.ink}">Recanto Lagoa Grande</text>`;
-  // waterfall
+      <text x="713" y="248" text-anchor="middle" font-family="Lato,sans-serif" font-size="10" font-style="italic" fill="${M.ink}">Recanto Lagoa Grande</text>`;
   s+=`<path d="M705 470 l40 0 l10 20 l-60 0z" fill="#9aa7a0"/><path d="M712 490 q4 18 0 36 M724 490 q4 18 0 38 M736 490 q4 18 0 36" stroke="${M.waterEdge}" stroke-width="3" fill="none" stroke-linecap="round"/>
       <ellipse cx="724" cy="540" rx="34" ry="9" fill="${M.water}" stroke="${M.waterEdge}"/>`;
-  // river
   s+=`<path d="M800 360 C 740 380, 700 350, 670 400 S 600 470, 590 520" stroke="${M.water}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
-  // trees (avoid town, house, lakes)
-  const avoid=(x,y)=> (x>135&&x<535&&y>230&&y<520) || (x>560&&x<760&&y>40&&y<190) || (x>590&&x<700&&y>380&&y<450) || (x>505&&x<600&&y>515&&y<575) || (x>650&&x<780&&y>230&&y<320) || (x>690&&x<770&&y>460&&y<560) || (x>70&&x<160&&y>540);
+  const avoid=(x,y)=> (x>135&&x<535&&y>215&&y<520) || (x>560&&x<760&&y>40&&y<190) || (x>590&&x<700&&y>380&&y<450) || (x>505&&x<600&&y>515&&y<575) || (x>650&&x<780&&y>230&&y<320) || (x>690&&x<770&&y>460&&y<560) || (x>70&&x<160&&y>540);
   for(let i=0;i<190;i++){
     const x=r()*800, y=r()*620; if(avoid(x,y)) continue;
-    const rr=5+r()*6; s+=`<circle cx="${x.toFixed(1)}" cy="${(y+2).toFixed(1)}" r="${rr.toFixed(1)}" fill="#000" opacity=".07"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rr.toFixed(1)}" fill="${r()>.5?M.tree:M.tree2}"/>`;
-  }
-  // roads: SP-214 from north (Itapecerica) past house into town; south exit to Val Flor
+    const rr=5+r()*6; s+=`<circle cx="${x.toFixed(1)}" cy="${(y+2).toFixed(1)}" r="${rr.toFixed(1)}" fill="#000" opacity=".07"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rr.toFixed(1)}" fill="${r()>.5?M.tree:M.tree2}"/>`;}
   const road=(d,w=12)=>`<path d="${d}" stroke="${M.roadEdge}" stroke-width="${w+4}" fill="none" stroke-linecap="round"/><path d="${d}" stroke="${M.road}" stroke-width="${w}" fill="none" stroke-linecap="round"/>`;
   s+=road("M560 -10 C 590 60, 610 110, 600 160 S 540 230, 505 262");
   s+=road("M170 490 C 140 525, 120 545, 60 640");
@@ -251,28 +590,19 @@ function baseMap(){
   s+=road("M600 160 C 650 180, 690 230, 700 268",7);
   s+=road("M515 470 C 540 510, 545 520, 552 532",6);
   s+=`<path d="M560 -10 C 590 60, 610 110, 600 160 S 540 230, 505 262" stroke="#e5b54a" stroke-width="1.6" stroke-dasharray="8 7" fill="none"/>`;
-  // route label
-  s+=`<g transform="translate(470 175) rotate(-38)"><rect x="-4" y="-13" width="150" height="20" rx="10" fill="${M.navy}"/><text x="71" y="1.5" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="10.5" fill="#fff">SP-214 · ~5 km até o centro</text></g>`;
-  s+=`<text x="575" y="22" font-family="Montserrat,sans-serif" font-weight="700" font-size="11" fill="${M.ink}">↑ Itapecerica da Serra</text>`;
-  s+=`<text x="40" y="604" font-family="Montserrat,sans-serif" font-weight="600" font-size="10.5" fill="${M.ink}">Val Flor ↓</text>`;
-  // town
+  s+=`<g transform="translate(470 175) rotate(-38)"><rect x="-4" y="-13" width="150" height="20" rx="10" fill="${M.navy}"/><text x="71" y="1.5" text-anchor="middle" font-family="Lato,sans-serif" font-weight="900" font-size="10.5" fill="#fff">SP-214 · ~5 km até o centro</text></g>`;
+  s+=`<text x="575" y="22" font-family="Lato,sans-serif" font-weight="900" font-size="11" fill="${M.ink}">↑ Itapecerica da Serra</text>`;
+  s+=`<text x="40" y="604" font-family="Lato,sans-serif" font-weight="700" font-size="10.5" fill="${M.ink}">Val Flor ↓</text>`;
   s+=`<path d="M160 258 Q150 245 168 240 L500 236 Q522 238 524 258 L526 498 Q524 516 504 516 L170 520 Q148 518 150 498 Z" fill="${M.town}" stroke="${M.roadEdge}" stroke-width="2"/>`;
-  for(let gx=175; gx<505; gx+=46) for(let gy=254; gy<505; gy+=40){
-    if(gy>320&&gy<400) continue; if(gy>410&&gy<450) continue;
-    s+=`<rect x="${gx}" y="${gy}" width="36" height="26" rx="4" fill="${M.block}"/>`;
-  }
-  // praça
+  for(let gx=175; gx<505; gx+=46) for(let gy=254; gy<505; gy+=40){ if(gy>320&&gy<400) continue; if(gy>410&&gy<450) continue;
+    s+=`<rect x="${gx}" y="${gy}" width="36" height="26" rx="4" fill="${M.block}"/>`; }
   s+=`<rect x="190" y="268" width="50" height="46" rx="8" fill="#cfe1c0"/><circle cx="215" cy="291" r="10" fill="#a9c894"/>`;
-  // streets in town
-  s+=road("M165 361 L512 361",14);
-  s+=road("M175 430 L505 430",10);
-  s+=road("M462 250 L462 505",9);
-  s+=`<text x="345" y="364.5" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="${M.navy}">RUA BOA VISTA</text>
-      <text x="362" y="433.2" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="600" font-size="8" letter-spacing=".8" fill="${M.ink}">R. CEL. LUIZ TENÓRIO</text>
-      <text transform="translate(465.2 468) rotate(-90)" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="600" font-size="8" letter-spacing=".8" fill="${M.ink}">R. EMÍLIA PIRES</text>
-      <text x="215" y="328" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8.5" font-style="italic" fill="${M.ink}">Praça</text>`;
+  s+=road("M165 361 L512 361",14); s+=road("M175 430 L505 430",10); s+=road("M462 250 L462 505",9);
+  s+=`<text x="345" y="364.5" text-anchor="middle" font-family="Lato,sans-serif" font-weight="900" font-size="9" letter-spacing="1.5" fill="${M.navy}">RUA BOA VISTA</text>
+      <text x="362" y="433.2" text-anchor="middle" font-family="Lato,sans-serif" font-weight="700" font-size="8" letter-spacing=".8" fill="${M.ink}">R. CEL. LUIZ TENÓRIO</text>
+      <text transform="translate(465.2 468) rotate(-90)" text-anchor="middle" font-family="Lato,sans-serif" font-weight="700" font-size="8" letter-spacing=".8" fill="${M.ink}">R. EMÍLIA PIRES</text>
+      <text x="215" y="328" text-anchor="middle" font-family="Lato,sans-serif" font-size="8.5" font-style="italic" fill="${M.ink}">Praça</text>`;
   s+=`<g><rect x="156" y="222" width="232" height="26" rx="13" fill="${M.navy}"/><text x="272" y="239.5" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#fff">CENTRO DE EMBU-GUAÇU</text></g>`;
-  // house (Greek white villa with blue dome)
   s+=`<g transform="translate(655 108)" filter="url(#sh)">
       <path d="M-55 4 L-30 0" stroke="${M.roadEdge}" stroke-width="7" stroke-linecap="round"/><path d="M-55 4 L-30 0" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
       <rect x="-30" y="-26" width="58" height="40" rx="2" fill="#fff" stroke="#c7d2e0"/>
@@ -281,14 +611,13 @@ function baseMap(){
       <path d="M-20 14 v-14 a5 5 0 0 1 10 0 v14z" fill="#2f6fb5"/>
       <rect x="6" y="-14" width="9" height="11" fill="#2f6fb5"/><rect x="-4" y="-40" width="8" height="10" rx="4" fill="#2f6fb5"/>
       <rect x="-36" y="14" width="70" height="7" fill="#7fc1f2" stroke="#5f9fdc"/>
-      <path d="M28 -26 q10 6 4 18" stroke="${css('--bougain')||'#d23a73'}" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/>
+      <path d="M28 -26 q10 6 4 18" stroke="#cf2f6e" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 3"/>
     </g>
     <g><rect x="604" y="138" width="110" height="38" rx="10" fill="${M.navy}"/>
       <text x="659" y="155" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="12.5" letter-spacing="1.2" fill="#fff">MÝRA VILLAS</text>
-      <text x="659" y="169" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#cfe0f6">Chácara Rancho Fundo</text></g>`;
-  // compass
-  s+=`<g transform="translate(60 60)"><circle r="26" fill="#fff" opacity=".85" stroke="${M.navy}" stroke-width="1.2"/><path d="M0 -20 L6 0 L0 20 L-6 0Z" fill="${M.navy}"/><path d="M0 -20 L6 0 L-6 0Z" fill="#d23a73"/><text y="-30" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="12" fill="${M.navy}">N</text></g>`;
-  s+=`<text x="785" y="610" text-anchor="end" font-family="Montserrat,sans-serif" font-size="9.5" fill="${M.ink}" opacity=".8">ilustrativo · fora de escala</text>`;
+      <text x="659" y="169" text-anchor="middle" font-family="Lato,sans-serif" font-size="9" fill="#cfe0f6">Av. Copacabana, 13</text></g>`;
+  s+=`<g transform="translate(60 60)"><circle r="26" fill="#fff" opacity=".85" stroke="${M.navy}" stroke-width="1.2"/><path d="M0 -20 L6 0 L0 20 L-6 0Z" fill="${M.navy}"/><path d="M0 -20 L6 0 L-6 0Z" fill="#cf2f6e"/><text y="-30" text-anchor="middle" font-family="Cinzel,serif" font-weight="700" font-size="12" fill="${M.navy}">N</text></g>`;
+  s+=`<text x="785" y="610" text-anchor="end" font-family="Lato,sans-serif" font-size="9.5" fill="${M.ink}" opacity=".8">ilustrativo · fora de escala</text>`;
   return s;
 }
 const BASE = baseMap();
@@ -298,96 +627,80 @@ function drawMap(){
   let s = BASE + `<g id="pins">`;
   const order = [...PLACES].sort((a,b)=>(a.id===sel)-(b.id===sel));
   for(const p of order){
-    const col = css(CATS[p.c].color), on = sel===p.id, dim = cat!=="todos" && p.c!==cat;
-    const r = on?16:12;
-    s += `<g class="pin${dim?" dim":""}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.no}. ${p.n}" filter="url(#sh)">
-      <title>${p.no}. ${p.n}</title>
+    const col = css(CATS[p.c].color), on = sel===p.id, dim = cat!=="todos" && p.c!==cat, r = on?16:12;
+    s += `<g class="pin${dim?" dim":""}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.no}. ${p.n}" filter="url(#sh)"><title>${p.no}. ${p.n}</title>
       ${on?`<circle cx="${p.x}" cy="${p.y}" r="24" fill="${col}" opacity=".25"/>`:""}
       <circle class="body" cx="${p.x}" cy="${p.y}" r="${r}" fill="${col}" stroke="#fff" stroke-width="2.5"/>
-      <text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="${on?13:11}" fill="#fff">${p.no}</text></g>`;
+      <text x="${p.x}" y="${p.y+4}" text-anchor="middle" font-family="Lato,sans-serif" font-weight="900" font-size="${on?13:11}" fill="#fff">${p.no}</text></g>`;
   }
-  s += `</g>`;
-  svg.innerHTML = s;
+  svg.innerHTML = s + `</g>`;
   svg.querySelectorAll(".pin").forEach(g=>{
-    const go=()=>{select(g.dataset.id,false);};
+    const go=()=>select(g.dataset.id,false);
     g.addEventListener("click",go);
     g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
   });
 }
-
 function detail(){
-  const el = document.getElementById("detail");
-  const p = PLACES.find(x=>x.id===sel);
+  const el = document.getElementById("detail"), p = PLACES.find(x=>x.id===sel);
   if(!p){
     el.style.setProperty("--cc","var(--navy)");
     el.innerHTML = `<div class="num" style="background:var(--navy)"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 20V10a6 6 0 0 1 12 0v10Z" fill="#fff"/></svg></div>
-      <div><div class="dmeta" style="color:var(--aegean)">Você está aqui</div><div class="dname">Mýra Villas · Chácara Rancho Fundo</div>
-      <div class="daddr">Embu-Guaçu – SP, 06910-770 · cerca de 5 km do centro pela SP-214</div>
-      <div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=-23.793139,-46.799183" target="_blank" rel="noopener">Abrir no Google Maps</a><a class="btn ghost" href="${POSTOS}" target="_blank" rel="noopener">Postos de combustível perto da casa</a></div></div>`;
+      <div><div class="dmeta" style="color:var(--aegean)">Você está aqui</div><div class="dname">Mýra Villas · Av. Copacabana, 13</div>
+      <div class="daddr">Chácara Rancho Fundo, Embu-Guaçu – SP · cerca de 5 km do centro pela SP-214</div>
+      <div class="actions"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=-23.793139,-46.799183" target="_blank" rel="noopener">Abrir no Google Maps</a><a class="btn ghost" href="${POSTOS}" target="_blank" rel="noopener">Postos de combustível perto</a></div></div>`;
     return;
   }
   el.style.setProperty("--cc",`var(${CATS[p.c].color})`);
   el.innerHTML = `<div class="num">${p.no}</div><div>
     <div class="dmeta">${CATS[p.c].short} · ${p.w}${p.w==="Centro"?" · ~5 km da casa":""}</div>
-    <div class="dname">${p.n}</div><div class="daddr">${p.a}</div><div class="note">${p.t}</div>
-    <div class="actions"><a class="btn" href="${gDir(p)}" target="_blank" rel="noopener">Rota no Google Maps</a><a class="btn ghost" href="${waze(p)}" target="_blank" rel="noopener">Waze</a><button class="btn soft" type="button" id="toList">Ver na lista</button></div></div>`;
-  document.getElementById("toList").onclick=()=>{const c=document.getElementById("p-"+p.id); c&&c.scrollIntoView({behavior:"smooth",block:"center"});};
+    <div class="dname">${p.n}</div><div class="daddr">${p.a}</div><div class="pnote">${p.t}</div>
+    <div class="actions"><a class="btn" href="${gDir(p)}" target="_blank" rel="noopener">Rota no Google Maps</a><a class="btn ghost" href="${waze(p)}" target="_blank" rel="noopener">Waze</a></div></div>`;
 }
-
 function legend(){
   const el = document.getElementById("legend");
   const all = [["todos",{short:"Tudo",color:"--navy"}], ...Object.entries(CATS)];
   el.innerHTML = all.map(([k,v])=>`<button class="chip" type="button" id="lg-${k}" data-k="${k}" aria-pressed="${cat===k}" style="--cc:var(${v.color})"><span class="dot"></span>${v.short}</button>`).join("");
-  el.onclick = e=>{const b=e.target.closest(".chip"); if(!b) return; setCat(b.dataset.k);};
+  el.onclick = e=>{const b=e.target.closest(".chip"); if(b) setCat(b.dataset.k);};
 }
-
 function amen(){
   const el = document.getElementById("amen");
   el.innerHTML = Object.entries(CATS).map(([k,v])=>`<button class="am" type="button" id="am-${k}" data-k="${k}" style="--cc:var(${v.color})">
       <span class="row"><span class="ok">${check}</span><span class="lbl">${v.short}</span></span>
       <span class="sub">${PLACES.filter(p=>p.c===k).length} lugares · ${v.sub}</span></button>`).join("");
-  el.onclick = e=>{const b=e.target.closest(".am"); if(!b) return; setCat(b.dataset.k); document.getElementById("h-map").scrollIntoView({behavior:"smooth"});};
+  el.onclick = e=>{const b=e.target.closest(".am"); if(b){setCat(b.dataset.k); listOpen=true; renderAll(); document.getElementById("mapscroll").scrollIntoView({behavior:"smooth",block:"center"});}};
 }
-
 function list(){
   const out = document.getElementById("out");
+  document.getElementById("showallWrap").hidden = listOpen;
+  if(!listOpen){out.innerHTML="";return;}
   let html = "";
   for(const [k,v] of Object.entries(CATS)){
     if(cat!=="todos" && cat!==k) continue;
     const g = PLACES.filter(p=>p.c===k);
     html += `<div class="cathead" style="--cc:var(${v.color})"><span class="dot"></span><h3>${v.label}</h3><span class="n">${g.length}</span></div><div class="list">`;
     html += g.map(p=>`<article class="place${sel===p.id?" hl":""}" id="p-${p.id}" style="--cc:var(${v.color})">
-      <button class="num" type="button" data-id="${p.id}" aria-label="Mostrar ${p.n} no mapa" style="border:0">${p.no}</button>
-      <div class="pname">${p.n}</div>
-      <div class="daddr">${p.a}</div>
-      <div class="note">${p.t}</div>
+      <button class="num" type="button" data-id="${p.id}" aria-label="Mostrar ${p.n} no mapa">${p.no}</button>
+      <div class="pname">${p.n}</div><div class="daddr">${p.a}</div><div class="pnote">${p.t}</div>
       <div class="actions"><a class="btn" href="${gDir(p)}" target="_blank" rel="noopener">Rota</a><a class="btn ghost" href="${waze(p)}" target="_blank" rel="noopener">Waze</a><a class="btn ghost" href="${gMap(p)}" target="_blank" rel="noopener">Google Maps</a></div>
     </article>`).join("") + `</div>`;
   }
   out.innerHTML = html;
   out.querySelectorAll("button.num").forEach(b=>b.onclick=()=>select(b.dataset.id,true));
 }
-
 function setCat(k){cat=k; if(sel && k!=="todos" && PLACES.find(p=>p.id===sel).c!==k) sel=null; renderAll();}
 function select(id,scrollToMap){
   sel = (sel===id && !scrollToMap)?null:id; renderAll();
-  if(scrollToMap) document.getElementById("h-map").scrollIntoView({behavior:"smooth"});
+  if(scrollToMap) document.getElementById("mapscroll").scrollIntoView({behavior:"smooth",block:"center"});
   const p=PLACES.find(x=>x.id===sel), sc=document.getElementById("mapscroll");
   if(p && sc.scrollWidth>sc.clientWidth){const k=sc.scrollWidth/800; sc.scrollTo({left:p.x*k-sc.clientWidth/2,behavior:"smooth"});}
 }
 function renderAll(){drawMap();detail();legend();amen();list();}
+document.getElementById("showall").onclick=()=>{listOpen=true;renderAll();};
+document.querySelectorAll("[data-goto]").forEach(a=>a.addEventListener("click",()=>{sel=a.dataset.goto;cat="todos";renderAll();}));
 renderAll();
-// on narrow screens start the map centred on the town
 (()=>{const sc=document.getElementById("mapscroll"); if(sc.scrollWidth>sc.clientWidth){const k=sc.scrollWidth/800; sc.scrollLeft=420*k-sc.clientWidth/2;}})();
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",renderAll);
 new MutationObserver(renderAll).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
-
-document.getElementById("copyHome").addEventListener("click",async e=>{
-  const txt="Chácara Rancho Fundo, Embu-Guaçu - SP, 06910-770 (-23.793139, -46.799183)";
-  try{await navigator.clipboard.writeText(txt); e.target.textContent="Endereço copiado";}
-  catch{e.target.textContent=txt;}
-  setTimeout(()=>e.target.textContent="Copiar endereço",2500);
-});
 </script>
 </body>
 </html>
